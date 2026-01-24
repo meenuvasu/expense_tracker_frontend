@@ -1,38 +1,111 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(120deg, #667eea, #764ba2);
+}
+
+/* Main card */
+.container {
+  max-width: 520px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+h2 {
   text-align: center;
+  color: #2d2d2d;
+  margin-bottom: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Dropdown */
+select {
+  width: 100%;
+  padding: 6px 8px;
+  margin: 6px 0 10px 0;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Summary box */
+.summary {
+  background: #eef1ff;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #3f51b5;
+}
+
+/* Form */
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* Input fields (MAIN FIX HERE 👇) */
+input {
+  padding: 6px 8px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  background: #5a67d8;
   color: white;
+  border: none;
+  padding: 7px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: #434190;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Expense list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f5f7ff;
+  padding: 6px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Delete button */
+li button {
+  background: #e53e3e;
+  padding: 4px 6px;
+  height: 26px;
+  font-size: 12px;
+  border-radius: 6px;
 }

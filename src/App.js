@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import API from "./services/api";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
+import MonthlySummary from "./components/MonthlySummary";
 
 function App() {
+  const [expenses, setExpenses] = useState([]);
+  const [month, setMonth] = useState(1);
+
+  const loadExpenses = async () => {
+    const res = await API.get("");
+    setExpenses(res.data);
+  };
+
+  useEffect(() => {
+    loadExpenses();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+
+      <h2>Expense Tracker</h2>
+
+      <label>Select Month: </label>
+      <select onChange={(e) => setMonth(Number(e.target.value))}>
+        {[...Array(12)].map((_, i) => (
+          <option key={i} value={i + 1}>
+            {i + 1}
+          </option>
+        ))}
+      </select>
+
+      <MonthlySummary expenses={expenses} month={month} />
+
+      <ExpenseForm refresh={loadExpenses} />
+      <ExpenseList expenses={expenses} refresh={loadExpenses} />
     </div>
   );
 }
