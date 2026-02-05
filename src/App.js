@@ -5,6 +5,8 @@ import axios from "axios";
 // Backend API URL from environment variable
 //const API = `${process.env.REACT_APP_API_URL}/expenses`;
 const API = import.meta.env.VITE_API_URL + "/expenses";
+console.log("ENV 👉", import.meta.env.VITE_API_URL);
+
 
 function App() {
   const [title, setTitle] = useState("");
