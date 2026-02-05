@@ -4,8 +4,8 @@ import axios from "axios";
 //const API = "http://localhost:8080/expenses";
 // Backend API URL from environment variable
 //const API = `${process.env.REACT_APP_API_URL}/expenses`;
-const API = import.meta.env.VITE_API_URL + "/expenses";
-console.log("ENV 👉", import.meta.env.VITE_API_URL);
+const API = process.env.REACT_APP_API_URL + "/expenses";
+//console.log("ENV 👉", import.meta.env.VITE_API_URL);
 
 
 function App() {
@@ -23,10 +23,20 @@ function App() {
     loadExpenses();
   }, []);
 
+  //const loadExpenses = async () => {
+  //  const res = await axios.get(API);
+  //  setExpenses(res.data);
+  //};
   const loadExpenses = async () => {
+  try {
     const res = await axios.get(API);
-    setExpenses(res.data);
-  };
+    setExpenses(Array.isArray(res.data) ? res.data : []);
+  } catch (err) {
+    console.error(err);
+    setExpenses([]);
+  }
+};
+
 
   // ✅ ADD / UPDATE
   const handleSubmit = async () => {
@@ -74,7 +84,7 @@ function App() {
   };
 
   // ✅ MONTH FILTER
-  const loadByMonth = async () => {
+  /*const loadByMonth = async () => {
     if (!month) return;
 
     const res = await axios.get(`${API}/month/${month}`);
@@ -82,7 +92,23 @@ function App() {
 
     const totalRes = await axios.get(`${API}/month/${month}/total`);
     setTotal(totalRes.data);
-  };
+  };*/
+  const loadByMonth = async () => {
+  if (!month) return;
+
+  try {
+    const res = await axios.get(`${API}/month/${month}`);
+    setExpenses(Array.isArray(res.data) ? res.data : []);
+
+    const totalRes = await axios.get(`${API}/month/${month}/total`);
+    setTotal(totalRes.data || 0);
+  } catch (err) {
+    console.error(err);
+    setExpenses([]);
+    setTotal(0);
+  }
+};
+
 
   return (
     <div style={{ padding: "30px" }}>
