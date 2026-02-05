@@ -4,7 +4,7 @@ import axios from "axios";
 //const API = "http://localhost:8080/expenses";
 // Backend API URL from environment variable
 //const API = `${process.env.REACT_APP_API_URL}/expenses`;
-const API = import.meta.env.REACT_APP_API_URL + "/expenses";
+const API = import.meta.env.VITE_API_URL + "/expenses";
 
 function App() {
   const [title, setTitle] = useState("");
