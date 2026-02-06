@@ -57,6 +57,10 @@ This project was completed step‑by‑step. Below is the **exact workflow follo
   * Maintainability
 * Quality gate verified before proceeding further
 
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e3caeaae-095e-4580-b3c5-d905ba4a366d" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e3caeaae-095e-4580-b3c5-d905ba4a366d" />
+
+
 ---
 
 ## 5️⃣ Docker Image Creation
