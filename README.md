@@ -58,8 +58,17 @@ This project was completed step‑by‑step. Below is the **exact workflow follo
 * Quality gate verified before proceeding further
 
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e3caeaae-095e-4580-b3c5-d905ba4a366d" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e3caeaae-095e-4580-b3c5-d905ba4a366d" />
-
+  Issue Description:
+     SonarQube analysis indicates a FAILED status for the frontend module due to code coverage requirements. 
+  Reason:
+     Frontend automated test cases have not yet been implemented, which results in low/zero test coverage and causes the Quality Gate to fail.
+  Actions Taken:
+      All identified bugs and code smells were reviewed and addressed.
+      Security Hotspots were reviewed and marked as Safe.
+      The remaining failure is only related to test coverage metrics.
+  Conclusion:
+     The SonarQube failure is limited to coverage constraints and does not reflect issues in code functionality or security.
+     Frontend test cases are planned to be added in a future phase to improve coverage and meet Quality Gate requirements.
 
 ---
 
@@ -101,6 +110,11 @@ npm run build
 ```
 build successfully
 ```
+![1000111209](https://github.com/user-attachments/assets/06f48677-8d3f-462d-b4d0-0da85384fd49)
+
+###BACKEND DEPLOYMENT
+
+
 
 ## 7️⃣ Custom Domain Configuration
 
