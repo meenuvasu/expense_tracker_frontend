@@ -76,6 +76,9 @@ This project was completed step‑by‑step. Below is the **exact workflow follo
 For Frontend :
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d0d3326d-900c-47d7-a176-726933f9d677" />
 
+For Backend:
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a1a52b45-6ab9-4392-b897-a8447742929c" />
+
 
 ---
 
