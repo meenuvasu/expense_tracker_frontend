@@ -72,6 +72,10 @@ This project was completed step‑by‑step. Below is the **exact workflow follo
   Conclusion:
      The SonarQube failure is limited to coverage constraints and does not reflect issues in code functionality or security.
      Frontend test cases are planned to be added in a future phase to improve coverage and meet Quality Gate requirements.
+  
+For Frontend :
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d0d3326d-900c-47d7-a176-726933f9d677" />
+
 
 ---
 
@@ -80,6 +84,8 @@ This project was completed step‑by‑step. Below is the **exact workflow follo
 * Dockerfile created for backend application
 * Backend application containerized using **Docker**
 * Docker image built successfully
+![1000111207](https://github.com/user-attachments/assets/6f659087-c517-4a7b-915f-5618f3479d69)
+
 
 ---
 
